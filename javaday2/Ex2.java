@@ -22,6 +22,7 @@ public class Ex2 {
         System.out.println("It's Empty");
         return 0;
         }else{
+            /*The tokenizer divides the string and assigns a token to each part*/
         StringTokenizer parts = new StringTokenizer(sentence);
         return parts.countTokens();
         }
