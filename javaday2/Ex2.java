@@ -18,11 +18,13 @@ public class Ex2 {
     System.out.println("The senteces contains "+count_W(sentence)+" words");
     }
     public static int count_W(String sentence){
-        if(sentence == null){
+        if(sentence.isEmpty()){
         System.out.println("It's Empty");
         return 0;
         }else{
-            /*The tokenizer divides the string and assigns a token to each part*/
+            /*The tokenizer divides the string and assigns a token to each part
+            counttoken is similar to count = count +1 or count++.
+            */
         StringTokenizer parts = new StringTokenizer(sentence);
         return parts.countTokens();
         }
