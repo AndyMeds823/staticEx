@@ -18,7 +18,7 @@ public class Ex2 {
     System.out.println("The senteces contains "+count_W(sentence)+" words");
     }
     public static int count_W(String sentence){
-        if(sentence == null || sentence.isEmpty()){
+        if(sentence == null){
         System.out.println("It's Empty");
         return 0;
         }else{
