@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 package javaday2;
-
 import java.util.Scanner;
-
+import java.util.StringTokenizer;
 /**
  *
  * @author amedi
@@ -19,16 +18,13 @@ public class Ex2 {
     System.out.println("The senteces contains "+count_W(sentence)+" words");
     }
     public static int count_W(String sentence){
-    int numWords = 0;
-    if(!(" ".equals(sentence.substring(0,1))) || !(" ".equals(sentence.substring
-        (sentence.length()-1)))){
-     for(int a= 0; a<sentence.length();a++ ){
-         if(sentence.charAt(a)==' '){
-         numWords++;
-      }
-     }
-     numWords=numWords+1;
-    }
-   return numWords;
+        if(sentence == null || sentence.isEmpty()){
+        System.out.println("It's Empty");
+        return 0;
+        }else{
+        StringTokenizer parts = new StringTokenizer(sentence);
+        return parts.countTokens();
+        }
   }
+
 }
